@@ -79,5 +79,12 @@ public void AddSection() {
 	WebElement AddSection1 = driver.findElement(By.xpath("//*[@id=\"reportDetailSectionAddSlidey\"]/glint-slidey/div/div[3]/div/div/section/div/glint-report-section-add-list/ul/li[1]/glint-report-section-add-item/div/button/i"));
 	AddSection1.click();
 }
+	@Test(priority = 8)
+	public void AddSection2() {
+		WebElement moreButton = driver.findElement(By.xpath("//*[@id=\'dropdownTrigger_glintDropdown_9ca443de-2409-4a2b-8368-04d51dd08e5f\']"));
+		moreButton.click();
+		WebElement AddSection1 = driver.findElement(By.xpath("//*[@id=\"reportDetailSectionAddSlidey\"]/glint-slidey/div/div[3]/div/div/section/div/glint-report-section-add-list/ul/li[1]/glint-report-section-add-item/div/button/i"));
+		AddSection1.click();
+}
 
 }
