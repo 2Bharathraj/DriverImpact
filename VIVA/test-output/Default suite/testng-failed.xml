@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="driverImpactReport.OpenDIR">
+      <class name="driverImpactReport.VivaDriverImpactReport">
         <methods>
-          <include name="Login"/>
-          <include name="AddSection"/>
+          <include name="setup"/>
+          <include name="Tc_03"/>
+          <include name="setObject"/>
+          <include name="ExtentReports"/>
+          <include name="Reports"/>
         </methods>
-      </class> <!-- driverImpactReport.OpenDIR -->
+      </class> <!-- driverImpactReport.VivaDriverImpactReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

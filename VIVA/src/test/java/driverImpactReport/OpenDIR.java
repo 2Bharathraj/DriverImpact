@@ -61,15 +61,22 @@ public class OpenDIR extends Login {
 	driver.findElement(By.xpath("//*[@id=\'slideyHeaderContent_SECTION_EDIT_SLIDEY\']/div/div/button")).click();
 	}
 
-@Test(priority = 6, enabled = false)
+@Test(priority = 6)
 public void Savebutton() {
+	iwait();
+	SearchProgram();
+	iwait();
+	OpenDriverImpactReport();
+	
 	iwait();iwait();
-	
-	
 	//export button-> drop down -> iterate one by one drop down to find save button using select class 
-	WebElement a  = driver.findElement(By.xpath("//*[@id=\'reportExportDropdown\']"));
+	WebElement a  = driver.findElement(By.xpath("(//select[@tabindex='-1'])[6]"));
+	a.click();
+	iwait();
 	Select save = new Select(a);
+	iwait();
 	save.selectByVisibleText("Save");
+	
 }
 
 @Test(priority = 7)
@@ -79,12 +86,12 @@ public void AddSection() {
 	WebElement AddSection1 = driver.findElement(By.xpath("//*[@id=\"reportDetailSectionAddSlidey\"]/glint-slidey/div/div[3]/div/div/section/div/glint-report-section-add-list/ul/li[1]/glint-report-section-add-item/div/button/i"));
 	AddSection1.click();
 }
-	@Test(priority = 8)
-	public void AddSection2() {
-		WebElement moreButton = driver.findElement(By.xpath("//*[@id=\'dropdownTrigger_glintDropdown_9ca443de-2409-4a2b-8368-04d51dd08e5f\']"));
-		moreButton.click();
-		WebElement AddSection1 = driver.findElement(By.xpath("//*[@id=\"reportDetailSectionAddSlidey\"]/glint-slidey/div/div[3]/div/div/section/div/glint-report-section-add-list/ul/li[1]/glint-report-section-add-item/div/button/i"));
-		AddSection1.click();
-}
+//	@Test(priority = 8)
+//	public void AddSection2() {
+//		WebElement moreButton = driver.findElement(By.xpath("//*[@id=\'dropdownTrigger_glintDropdown_9ca443de-2409-4a2b-8368-04d51dd08e5f\']"));
+//		moreButton.click();
+//		WebElement AddSection1 = driver.findElement(By.xpath("//*[@id=\"reportDetailSectionAddSlidey\"]/glint-slidey/div/div[3]/div/div/section/div/glint-report-section-add-list/ul/li[1]/glint-report-section-add-item/div/button/i"));
+//		AddSection1.click();
+//}
 
 }
